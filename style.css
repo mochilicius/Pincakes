@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300..700&family=Delius+Swash+Caps&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 300 to 700 */
+
+.borel-regular {
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.delius-swash-caps-regular {
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comfortaa {
+  font-family: "Comfortaa", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --accent: #B4D3D5;
+  --fundo: #3c7f90;
+  --cinza: #98acb1;
+  --bege: #cec6bc;
+  --piplup: #b4d3d5;
+  --dinheiro: #15404c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(26, 60, 91, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  height: 80px;
+  position: sticky;
+  z-index: 7;
+  top: 0;
+}
+
+.header img {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.header a {
+  font-family: "Delius Swash Caps", cursive;
+  float: left;
+  color: var(--accent);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--fundo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+footer {
+  font-family: "Delius Swash Caps", cursive;
+  text-align: center;
+  margin: 10px 0px 0px;
+  width: 100%;
+  color: var(--accent);
+  background-color: rgb(26, 60, 91, 0.3);
+  bottom: 0%;
+  position: fixed;
+  z-index: 7;
+}
+
+#cardapioPng {
+  margin-top: 15px;
+  overflow: hidden;
+  width: 2160px;
+  height: 300px;
+  background-color: #3c7f90;
+  background-image: url(cardapioN.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cupcakeNome {
+  margin-top: 5%;
+  width: 2160px;
+  height: 100px;
+  background-image: url(cupcakeN.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#doceNome {
+  margin-top: 12%;
+  width: 2160px;
+  height: 100px;
+  background-image: url(doceN.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bebidaNome {
+  margin-top: 12%;
+  width: 2160px;
+  height: 100px;
+  background-image: url(bebidaN.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#caixaProdutos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* preenche automaticamente as colunas com um mínimo de 200px */
+  grid-gap: 20px;
+  padding: 15px;
+  justify-items: center;
+  /* centraliza!!! */
+  margin-top: 20px;
+  width: 75%;
+  overflow-y: auto;
+  /* vertical */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  border: 5px dashed var(--piplup);
+  border-radius: 15px;
+  max-height: 650px;
+}
+
+/* == SOBRE PRODUTOS */
+.produtos {
+  font-family: Comfortaa;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* alinha na esquerda pra ficar bonitinho */
+  width: 220px;
+  height: 270px;
+  padding: 20px;
+  background-color: var(--cinza);
+  border: 1px solid var(--piplup);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+.produtos:hover {
+  background-color: #8a9a9e;
+}
+
+
+.produtoT {
+  font-family: "Borel", cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.produtoI {
+  width: 100%;
+  height: 145px;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #8a9a9e;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produtoI>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.produtoD {
+  font-size: 0.9em;
+  color: #666;
+  margin: 2px 0;
+  height: 40px;
+}
+
+.produtoP {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--dinheiro);
+  margin: 5px 0;
+}
+
+.produtoPN {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--dinheiro);
+  margin: 5px 0;
+}
+
+.produtos>button {
+  padding: 2px 5px;
+  font-weight: bold;
+  color: white;
+  background-color: #83c7d8;
+  border-radius: 5px;
+  border-color: var(--fundo);
+  border-style: dashed;
+  border: 2px dashed;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.produtos>button:hover {
+  background-color: #4d92a3;
+}
+
+/*== pagamento/formulario ==*/
+
+#formulario {
+  margin: 15px;
+  display: grid;
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "b c c"
+    "b d d";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  background-color: var(--cinza);
+  border: 1px solid var(--piplup);
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+#formulario>div {
+  border: 1px solid var(--piplup);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Comfortaa;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#titulario {
+  grid-area: a;
+  display: flex;
+  justify-content: center;
+  border: none !important;
+}
+
+#listaPrecos {
+  border-right: none !important;
+  border-left: none !important;
+  border-top: 2px dotted var(--piplup) !important;
+  border-bottom: 2px dotted var(--piplup) !important;
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  padding-right: 10px;
+}
+
+#total {
+  font-family: Comfortaa;
+  border: none !important;
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  margin: 5px;
+}
+
+#listaPrecos>div {
+  font-family: Comfortaa;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 40px;
+  padding: 20px;
+  border: 1.5px dashed var(--fundo);
+  color: white;
+  background-color: #83c7d8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  position: relative;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+#listaPrecos>div:hover {
+  background-color: #ae4c7b;
+  border: 1.5px dashed #632736;
+}
+
+#finalizacao {
+  border: none !important;
+  grid-area: b;
+  display: grid;
+  grid-template-areas:
+    "x x"
+    "y z";
+  gap: 10px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+#informacao {
+  grid-area: x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px dashed var(--fundo);
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+#forms {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#forms>input {
+  font-family: "Comfortaa", serif;
+  padding: 5px;
+  color: white;
+  background-color: #83c7d8;
+  border-radius: 5px;
+  border-color: var(--fundo) !important;
+  border-style: dashed !important;
+  border: 2px dashed !important;
+}
+
+#container {
+  grid-area: y;
+  display: flex;
+  gap: 10px;
+  /* Espaço entre os botões */
+  justify-content: center;
+  /* Centraliza os botões horizontalmente */
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+}
+
+#container>button {
+  font-family: "Borel", cursive;
+  font-size: 14pt;
+  /* Tamanho do texto ajustado */
+  padding: 10px 10px;
+  /* Ajusta o preenchimento do botão */
+  color: white;
+  background-color: #83c7d8;
+  border-radius: 5px;
+  border-color: var(--fundo);
+  border-style: dashed;
+  border: 2px dashed;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: auto;
+  /* O botão não ocupa 100% do espaço */
+  height: 50px;
+  /* Altura do botão */
+}
+
+#container>button:hover {
+  background-color: #4d92a3;
+}
+
+/* PARTE SLIDER HOME */
+
+/* socorro deus agr*/
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px white solid;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1;
+  border-radius: 60%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* HOME PAGE CHOOSE */
+.choose {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  margin-top: 0px;
+}
+
+
+
+
+
+/* media quey da navegation q tá ruin*/
+/*media query pras palavras lá em cima e o icon */
