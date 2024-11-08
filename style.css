@@ -462,7 +462,7 @@ footer {
   cursor: pointer;
   font-size: 20px;
   z-index: 1;
-  border-radius: 60%;
+  border-radius: 70px;
 }
 
 .prev {

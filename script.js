@@ -12,6 +12,7 @@ const saborSection = document.getElementById('cardapio');
 
 homeLink.addEventListener('click', function() {
   console.log('Navegando para Home');
+  window.history.pushState({}, "", "/Pincakes/home");
   homeSection.style.display = 'contents';
   saborSection.style.display = 'none';
   carrinhoSection.style.display = 'none';
@@ -19,6 +20,7 @@ homeLink.addEventListener('click', function() {
 
 saboresLink.addEventListener('click', function() {
   console.log('Navegando para Sabores');
+  window.history.pushState({}, "", "/Pincakes/cardapio");
   homeSection.style.display = 'none';
   saborSection.style.display = 'contents';
   carrinhoSection.style.display = 'none';
@@ -26,6 +28,7 @@ saboresLink.addEventListener('click', function() {
 
 carrinhoLink.addEventListener('click', function() {
   console.log('Navegando para Finalizar Compra');
+  window.history.pushState({}, "", "/Pincakes/carrinho");
   homeSection.style.display = 'none';
   saborSection.style.display = 'none';
   carrinhoSection.style.display = 'contents';
@@ -34,6 +37,7 @@ carrinhoLink.addEventListener('click', function() {
 cartLink.addEventListener('click', function() {
   console.log('Navegando para Carrinho');
   const carrinhoSection = document.getElementById('carrinho');
+  window.history.pushState({}, "", "/Pincakes/carrinho");
   homeSection.style.display = 'none';
   saborSection.style.display = 'none';
   carrinhoSection.style.display = 'contents';
@@ -80,6 +84,7 @@ function atualizarCarrinho() {
     produtoDiv.textContent = `${carrinho[i]} --- R$ ${carrinhoPreco[i].toFixed(2)}`
     produtoDiv.id = `prod${i + 1}`;
     listaPrecos.appendChild(produtoDiv) // deixa como filho
+
     produtoDiv.addEventListener('click', function() {
       removerItemDoCarrinho(i); //ele vai chamar a função de baixo no click, ja com o index dele mesmo
     });
@@ -88,22 +93,21 @@ function atualizarCarrinho() {
   document.getElementById('total').textContent = `Total: R$ ${carrinhoTotal.toFixed(2)}`;
   console.log(carrinhoTotal)
 }
+
 // SISTEMA REMOÇÃO (atrelado ao de criação pq ele atribui um event listener a todos os seus items)
 function removerItemDoCarrinho(i) {
   carrinho.splice(i, 1); // remove o nome 
   carrinhoPreco.splice(i, 1); // remove o preço 
 
-  const removida = document.getElementById(`prod${i}`) //ele vai achar a div de nome prod1 prod3 etc por isso é meio esquisito
+  const removida = document.getElementById(`prod${i}`) //ele vai achar a div de nome prod1 prod3 etc baseado no i
   if (removida) {
-    removida.remove(); // Remove a div da lista de preços caso ela existe
+    removida.remove(); // remove da lista caso ela existe
   }
   
   atualizarCarrinho()
   console.log(`Produto removido: ${carrinho[i]} / R$ ${carrinhoPreco[i].toFixed(2)}`);
   console.log(`Carrinho atualizado: ${carrinho} / R$ ${carrinhoPreco.toFixed(2)}`)
 }
-
-
 
 let pagamento = document.getElementById('enviar')
 pagamento.addEventListener('click', function(event){
@@ -117,6 +121,8 @@ pagamento.addEventListener('click', function(event){
     alert(`Preencha seus dados corretamente!`);
   }
 });
+
+
 // PARTE DO SLIDER ME MAtaNDOOOOO
 let currentIndex = 0;
 
