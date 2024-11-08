@@ -1,4 +1,4 @@
-//define as seções como items no java
+// Seleciona as seções e links
 const homeLink = document.getElementById('HOME');
 const saboresLink = document.getElementById('SABORES');
 const carrinhoLink = document.getElementById('CARRINHO');
@@ -8,41 +8,62 @@ const carrinhoSection = document.getElementById('carrinho');
 const homeSection = document.getElementById('home');
 const saborSection = document.getElementById('cardapio');
 
-//SISTEMA DE PAGINAS
+// mostra section baseada no URl 
+// alterado para nao usar '/' pq nao funciona com back, o arquivo nao reconehce
+// o objeto "window" tem as seguintes partes: href, protocol, host, pathname e hash
+// o slice vai obter o nosso hash sem o # q vem antes dele, e mudar a página de acordo!!! 
+// (˶˃ ᵕ ˂˶) .ᐟ.ᐟ
+// fonte: https://developer.mozilla.org/en-US/docs/Web/API/Location
+//aliás, adaptei pra ele ja mudar a section nessa mesma função pq tava HORRIVEL e redundante repetir isso 4 vezes seguidas
+function manterURL() {
+   const hash = window.location.hash.slice(1); 
+   if (hash === 'home' || hash === '') {
+      homeSection.style.display = 'contents';
+      saborSection.style.display = 'none';
+      carrinhoSection.style.display = 'none';
+   } else if (hash === 'cardapio') {
+      homeSection.style.display = 'none';
+      saborSection.style.display = 'contents';
+      carrinhoSection.style.display = 'none';
+   } else if (hash === 'carrinho') {
+      homeSection.style.display = 'none';
+      saborSection.style.display = 'none';
+      carrinhoSection.style.display = 'contents';
+   }
+}
 
+// Chama a função ao carregar a página
+manterURL();
+
+// SISTEMA DE PÁGINAS
+//agora usa # e window.location.hash pq a '/' nao deixava usar botão pra voltar
+// razão da mudança: permitir o uso de back e forward no mouse 
 homeLink.addEventListener('click', function() {
-  console.log('Navegando para Home');
-  window.history.pushState({}, "", "/Pincakes/home");
-  homeSection.style.display = 'contents';
-  saborSection.style.display = 'none';
-  carrinhoSection.style.display = 'none';
+   console.log('Navegando para Home');
+   window.location.hash = 'home';
+   manterURL();
 });
 
 saboresLink.addEventListener('click', function() {
-  console.log('Navegando para Sabores');
-  window.history.pushState({}, "", "/Pincakes/cardapio");
-  homeSection.style.display = 'none';
-  saborSection.style.display = 'contents';
-  carrinhoSection.style.display = 'none';
+   console.log('Navegando para Sabores');
+   window.location.hash = 'cardapio';
+   manterURL();
 });
 
 carrinhoLink.addEventListener('click', function() {
-  console.log('Navegando para Finalizar Compra');
-  window.history.pushState({}, "", "/Pincakes/carrinho");
-  homeSection.style.display = 'none';
-  saborSection.style.display = 'none';
-  carrinhoSection.style.display = 'contents';
+   console.log('Navegando para Finalizar Compra');
+   window.location.hash = 'carrinho';
+   manterURL();
 });
 
 cartLink.addEventListener('click', function() {
-  console.log('Navegando para Carrinho');
-  const carrinhoSection = document.getElementById('carrinho');
-  window.history.pushState({}, "", "/Pincakes/carrinho");
-  homeSection.style.display = 'none';
-  saborSection.style.display = 'none';
-  carrinhoSection.style.display = 'contents';
+   console.log('Navegando para Carrinho');
+   window.location.hash = 'carrinho';
+   manterURL();
 });
 
+// Lida com mudanças no hash quando o usuário navega para trás ou para frente
+window.addEventListener('hashchange', manterURL);
 const botoes = document.querySelectorAll('.comprar');
 
 let carrinho = [];

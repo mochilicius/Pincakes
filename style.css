@@ -30,6 +30,26 @@
   --dinheiro: #15404c;
 }
 
+/*TENTANDO FAZER MEDIA*/
+
+@media screen and (max-width: 769px) {
+  .header{
+    height: 25%;
+  }
+  .header a{
+    font-size: 8px;
+    line-height: 25px;
+    color:black;
+  }
+  #cardapioPng{
+    background-size: cover;
+  }
+}
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -102,7 +122,7 @@ footer {
 #cardapioPng {
   margin-top: 15px;
   overflow: hidden;
-  width: 2160px;
+  width: 100%;
   height: 300px;
   background-color: #3c7f90;
   background-image: url(cardapioN.svg);
@@ -113,7 +133,7 @@ footer {
 
 #cupcakeNome {
   margin-top: 5%;
-  width: 2160px;
+  width: 100%;
   height: 100px;
   background-image: url(cupcakeN.svg);
   background-size: contain;
@@ -123,7 +143,7 @@ footer {
 
 #doceNome {
   margin-top: 12%;
-  width: 2160px;
+  width: 100%;
   height: 100px;
   background-image: url(doceN.svg);
   background-size: contain;
@@ -133,7 +153,7 @@ footer {
 
 #bebidaNome {
   margin-top: 12%;
-  width: 2160px;
+  width: 100%;
   height: 100px;
   background-image: url(bebidaN.svg);
   background-size: contain;
