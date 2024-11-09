@@ -499,17 +499,19 @@ footer {
 
 /* HOME PAGE CHOOSE */
 .contenthome{
-  width: 90%;
-  height: 300px;
+  width: 100%;
+  height: 250px;
   background-color: #dff3e8;
-  margin-top: 2%;
+  margin-top: 1%;
   background-image: url(pinguins.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 8%;
 }
 .contenthome2 {
   width: 90%;
   height: 500px;
-  background-color: #dff3e8;
+  background-color: #dff3e800;
   margin-top: 2%;
   padding-top: 5%;
   padding-left: 5%;
@@ -525,6 +527,7 @@ footer {
   position: relative;
   overflow: hidden; 
   font-size: x-large;
+  border: 10px #dff3e8 solid;
   
 }
 
@@ -577,8 +580,85 @@ footer {
 a{
   text-decoration: none;
 }
+.feedback{
+  width: 100%;
+  height: 250px;
+  background-color: #1f3f47;
+  background-image: url(feedback.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.feedbackContent{
+  width: 100%;
+  height: 700px;
+  background-color: #1f3f47;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+/* SLIDER CARDS FEEDBACK */
+.sliderFed{
+  margin: auto;
+  height: 250vh;
+  position: relative;
+  width: 90%;
+  margin: 2%;
+  place-items: center;
+}
+.slide_track{
+  display: flex;
+  width: calc(250px*12);
+  animation: scroll 40s linear infinite;
+}
+
+.slide_track:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px*6));
+  }
+}
 
 
+.slideFed{
+  height: 200px;
+  width: 250px ;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+.fed{
+  width: 100%;
+  transition: all 320ms ease-in-out;
+}
+.fed:hover{
+  transform: translateZ(20px);
+}
+/*gradientes aquiii bb */
+.sliderFed::before,
+.sliderFed::after{
+z-index: 2;
+width: 15%;
+position: absolute;
+height: 100%;
+content: "";
+}
 
+.sliderFed::before{
+  left:0 ;
+  top: 0;
+}
+.sliderFed::after{
+  left:0 ;
+  top: 0;
+  transform: rotateZ(180deg);
+}
 /* media quey da navegation q tá ruin*/
 /*media query pras palavras lá em cima e o icon */
