@@ -590,17 +590,17 @@ a{
 }
 .feedbackContent{
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-color: #1f3f47;
   display: grid;
-  min-height: 100vh;
+  min-height: 30vh;
   place-items: center;
 }
 
 /* SLIDER CARDS FEEDBACK */
 .sliderFed{
   margin: auto;
-  height: 250vh;
+  height: 100vh;
   position: relative;
   width: 90%;
   margin: 2%;
