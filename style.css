@@ -662,3 +662,44 @@ content: "";
 }
 /* media quey da navegation q tá ruin*/
 /*media query pras palavras lá em cima e o icon */
+
+/*MEDIA QUERY */ 
+@media (max-width: 480px) {
+  .image-slider{
+    height: 20%;
+  }
+  .next,.prev{
+    font-size: 2%;
+  }
+  .contenthome{
+    height: 100px;
+  }
+
+  .box1, .box2, .box3 {
+    height: 50%;
+    border: 2px white solid;
+    background-size: 120%;
+  }
+  .contentText1{
+    font-size: medium;
+  }
+  .header a {
+   font-size:smaller
+  }
+  .contenthome2{
+    height: 200px;
+  }
+  .feedbackContent{
+    height: 300px;
+  }
+  .feedback{
+    height: 90px;
+  }
+  .slideFed{
+    height: 4%;
+    width:4%;
+  }
+
+
+
+}
