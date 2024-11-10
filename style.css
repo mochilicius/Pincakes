@@ -768,7 +768,7 @@ a{
     background-size: 120%;
   }
   .contentText1{
-    font-size: medium;
+    font-size: 100%;
   }
   .header a {
    font-size:smaller
@@ -781,11 +781,11 @@ a{
 /* Tablets Paisagem e Laptops Pequenos (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .feedback {
-    height: 250px;
+    height: 130px;
   }
 
   .feedbackContent {
-    height: 450px;
+    height: 200px;
   }
 
   .sliderFed {
@@ -800,6 +800,34 @@ a{
   .slideFed {
     width: 240px;
   }
+  .next,.prev{
+    font-size: 4%;
+  }
+  .contenthome{
+    height: 120px;
+    background-position-y: 12%;
+  }
+  #cardapioPng {
+    background-size: cover;
+  }
+
+  .box1, .box2, .box3 {
+    height: 90%;
+    border: 2px white solid;
+    background-size: 120%;
+  }
+  .contentText1{
+    font-size: 160%;
+  }
+  .header a {
+   font-size:smaller
+  }
+  .contenthome2{
+    height: 230px;
+  }
+  .image-slider{
+    height: 20%;
+  }
 }
 
 /* Desktops Médios (1025px a 1440px) */
@@ -808,24 +836,87 @@ a{
     width: calc(250px * 12);
     animation-duration: 40s;
   }
+  .sliderFed{
+  width: 95%;
+  height: 70%; 
+  }
+ 
+  .contenthome{
+    height: 150px;
+    background-position-y: 15%;
+  }
+  #cardapioPng {
+    background-size: cover;
+  }
+
+  .box1, .box2, .box3 {
+    height: 90%;
+    border: 2px white solid;
+    background-size: 120%;
+  }
+  .contenthome2{
+    height: 340px;
+  }
+  .contentText1{
+    font-size: 180%;
+  }
+  .header a {
+   font-size:medium; 
+  }
+  .image-slider{
+    height: 20%;
+  }
+  .next,.prev{
+    font-size: 150%;
+  }
+
 }
 
 /* Desktops Grandes (acima de 1441px) */
 @media (min-width: 1441px) {
   .feedback {
-    height: 250px;
+    height: 260px;
   }
 
   .feedbackContent {
-    height: 500px;
+    height: 300px;
   }
 
   .sliderFed {
-    width: 80%;
+    width: 95%;
+    height: 60%;
   }
 
   .slide_track {
     width: calc(250px * 12);
     animation-duration: 35s;
+  }
+  .contenthome{
+    height: 150px;
+    background-position-y: 15%;
+  }
+  #cardapioPng {
+    background-size: cover;
+  }
+
+  .box1, .box2, .box3 {
+    height: 90%;
+    border: 2px white solid;
+    background-size: 120%;
+  }
+  .contenthome2{
+    height: 340px;
+  }
+  .contentText1{
+    font-size: 200;
+  }
+  .header a {
+   font-size:medium; 
+  }
+  .image-slider{
+    height: 20%;
+  }
+  .next,.prev{
+    font-size: 180%;
   }
 }
