@@ -605,6 +605,8 @@ a{
   width: 90%;
   margin: 2%;
   place-items: center;
+  overflow-x: hidden;
+  overflow-y: show;
 }
 .slide_track{
   display: flex;
