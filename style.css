@@ -678,7 +678,8 @@ a{
     font-size: 2%;
   }
   .contenthome{
-    height: 100px;
+    height: 50px;
+    background-position-y: 12%;
   }
   #cardapioPng {
     background-size: cover;
@@ -711,7 +712,8 @@ a{
   }
 
   .sliderFed {
-    width: 100%;
+    width: 95%;
+
   }
 
   .slide_track {
@@ -723,8 +725,8 @@ a{
     height: 6%;
     width: 6%;
   }
-
-
+ 
+   
 }
 /* Tablets (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
@@ -914,7 +916,7 @@ a{
    font-size:medium; 
   }
   .image-slider{
-    height: 20%;
+    height: 9%;
   }
   .next,.prev{
     font-size: 180%;
