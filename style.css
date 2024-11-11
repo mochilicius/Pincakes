@@ -674,6 +674,10 @@ a{
   .image-slider{
     height: 20%;
   }
+  #formulario{
+    width:90%; 
+    display: contents;
+  }
   .next,.prev{
     font-size: 2%;
   }
@@ -785,7 +789,7 @@ a{
   }
   #formulario{
     width:90%; 
-    grid-template-columns: 0.8fr 5fr 5fr;
+    display: contents;
   }
   #listaPrecos{
     font-size: small;
