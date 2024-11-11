@@ -725,7 +725,9 @@ a{
     height: 6%;
     width: 6%;
   }
- 
+  #titulario img{
+    width: 500px;
+  }
    
 }
 /* Tablets (481px a 768px) */
@@ -777,6 +779,16 @@ a{
   }
   .contenthome2{
     height: 165px;
+  }
+  #titulario img{
+    width: 650px;
+  }
+  #formulario{
+    width:90%; 
+    grid-template-columns: 0.8fr 5fr 5fr;
+  }
+  #listaPrecos{
+    font-size: small;
   }
 }
 
@@ -830,6 +842,9 @@ a{
   .image-slider{
     height: 20%;
   }
+   
+
+
 }
 
 /* Desktops Médios (1025px a 1440px) */
