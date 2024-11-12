@@ -728,6 +728,16 @@ a{
   #titulario img{
     width: 500px;
   }
+  #formulario {
+    grid-template-areas:
+      "a a a"
+      "c c c"
+      "c c c"
+      "b d d";
+  }  
+  #formulario>div {
+    font-size: 100% ;
+  }
    
 }
 /* Tablets (481px a 768px) */
@@ -790,6 +800,13 @@ a{
   #listaPrecos{
     font-size: small;
   }
+  #formulario {
+    grid-template-areas:
+      "a a a"
+      "c c c"
+      "c c c"
+      "b d d";
+  }  
 }
 
 /* Tablets Paisagem e Laptops Pequenos (769px a 1024px) */
@@ -842,7 +859,13 @@ a{
   .image-slider{
     height: 20%;
   }
-   
+  #formulario {
+    grid-template-areas:
+      "a a a"
+      "c c c"
+      "c c c"
+      "b d d";
+  } 
 
 
 }
