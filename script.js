@@ -1,8 +1,7 @@
 // Seleciona as seções e links
 const homeLink = document.getElementById('HOME');
 const saboresLink = document.getElementById('SABORES');
-const carrinhoLink = document.getElementById('CARRINHO');
-const cartLink = document.getElementById('cart');
+const carrinhoLink = document.getElementById('cart');
 
 const carrinhoSection = document.getElementById('carrinho');
 const homeSection = document.getElementById('home');
@@ -56,11 +55,6 @@ carrinhoLink.addEventListener('click', function() {
    manterURL();
 });
 
-cartLink.addEventListener('click', function() {
-   console.log('Navegando para Carrinho');
-   window.location.hash = 'carrinho';
-   manterURL();
-});
 
 // Lida com mudanças no hash quando o usuário navega para trás ou para frente
 window.addEventListener('hashchange', manterURL);
