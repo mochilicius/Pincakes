@@ -50,7 +50,7 @@ saboresLink.addEventListener('click', function() {
 });
 
 carrinhoLink.addEventListener('click', function() {
-   console.log('Navegando para Finalizar Compra');
+   console.log('Navegando para Carrinho');
    window.location.hash = 'carrinho';
    manterURL();
 });
