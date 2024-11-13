@@ -138,6 +138,7 @@ pagamento.addEventListener('click', function(event){
 });
 
 
+//teste
 // PARTE DO SLIDER ME MAtaNDOOOOO
 let currentIndex = 0;
 
